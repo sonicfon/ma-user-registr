@@ -35,7 +35,7 @@ class Userbase(Base):
 
 def fill_data():
     with Session() as session:
-        insertion = Userbase(f'{uuid.uuid4()}', f'{femail}', f'{fphone}', f'{fpassword}')
+        insertion = Userbase(f'{uuid.uuid4().upper()}', f'{femail}', f'{fphone}', f'{fpassword}')
         session.add(insertion)
         session.commit()
 
